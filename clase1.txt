@@ -1,0 +1,37 @@
+Una vez instalado Django
+
+>> django-admin
+
+se va a trabajar con el comando 
+
+>> startproject
+
+Para crear un proyecto en Django
+
+>> django-admin startproject <nombre>
+
+Para cambiar de directorio en Linux o windows se usa
+
+>>cd
+
+que viene de "change directory
+
+Revisar cada uno de los archivos que crea Django por defecto
+
+>>Python manage.py runserver
+
+Mostrar el servidor corriendo
+
+Para apagar el servidor se usa 
+
+>> CTRL+C
+
+Concepto de aplicación dentro de Django
+
+Este proyecto solo tendrá una aplicación. 
+
+Comando para crear una aplicación.
+
+>> python manage.py startapp <nombre>
+
+Configurar installed aps en settings.py
