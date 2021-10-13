@@ -1,0 +1,81 @@
+En la clase #2 se trata el tema de enrutamiento 
+y cómo los urls y las vistas funcionan juntas
+para devolver plantillas html al usuario. 
+
+>> urls.py 
+
+El trabajo de este archivo es buscar la ruta
+que el usuario escribe en el buscador y devolver
+una pagina. 
+
+Django divide este proceso en 2, ya que el Url
+dispara o llama una función, la cual es la encargada
+de devolver el HTML correspondiente a esa pagina. 
+
+los urls en django son una lista de python. 
+
+>> from django.http import HttpResponse en urls.py exterior
+
+Crear 2 vistas (home y contact)
+
+Primero hacerlo en el urls.py exterior
+
+Despues pasarlo al views.py de la aplicación
+y crear un urls.py dentro de la aplicación 
+
+Separar los urls en dos archivos y amarrarlos
+
+>> path("",include("accounts.urls"))
+
+Parte 2 de la clase
+
+Devolver un HTML
+
+Hacer un folder de templates dentro de accounts
+y hacer un forlder accounts dentro de templates
+
+Crear el primer Html
+
+y revisar explicación en views.html
+
+Cambiar el HttpResponse 
+
+Parte 3 Herencia de plantillas
+
+Hablar de redundancia del codigo
+
+crear el main.html
+
+Explicar block tags y como las mismas
+previenen errore y ahorran mucho tiempo
+sin tener que repetir codigo
+
+Mostrar y sacar el Navbar del main.html
+
+Parte 4 Bootstrap
+
+https://getbootstrap.com/docs/4.0/components/navbar/
+
+Mostrar el Html sin estilo y mencionar que ahora
+se necesita el bootstrap cdn para estilizar el navbar
+
+https://getbootstrap.com/docs/4.3/getting-started/introduction/
+
+Cambiar el color del navbar
+
+Mostrar que el boton de hamburguesa no sirve
+meter un poco de JS para que sirva
+
+Copiar el template y explicar como se va a ver todo
+
+Explicar el HTML de bootstrap
+
+Hacer el status.html y agregarle css
+
+Hacer lo mismo para products.html
+
+Hacer lo mismo para customer.html
+
+Hablar de la siguiente clase en static files
+
+fin
