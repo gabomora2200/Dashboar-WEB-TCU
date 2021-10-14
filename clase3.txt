@@ -1,0 +1,34 @@
+1 Primera cosa que hacer, Mover el CSS en main.html
+al folder de archivos estáticos
+
+>> Crear el folder Static en el root directory 
+
+Crear los 3 sub folders dentro de estatic
+
+Images,css y js
+
+Crear el archivo main.css
+
+explicar como ahora el html no tiene idea acerca de esto 
+y conectarlos. 
+
+En el settings.py configurar el folder de static. 
+
+>> import os
+
+>> STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+
+Exportar el css al main.html
+
+Hablar de template tags
+
+>> {% load static %}
+>> <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+
+Mostrar que el CSS se incrustó de manera correcta. 
+
+Configurar el settings.py para las imagenes
+
+Meter la imagen del logo del tcu en la pagina
