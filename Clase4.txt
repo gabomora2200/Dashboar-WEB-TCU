@@ -1,0 +1,98 @@
+Hacer una introduccion a las bases de datos, y al panel de administracion
+
+Mostrar la base de datos en settings.py
+
+Mostrar en el CMD que no se ha migrado
+
+>>python manage.py migrate
+
+Este comando crea y actualiza las tablas en la base de datos
+
+Como vamos a trabajar con Sqlite, no hay forma de ver las tablas
+por lo que entonces vamos a usar el panel de administracion de Django. 
+
+Para poder entrar al panel de administracion se debe crear un superusuario
+
+>> python manage.py createsuperuser
+
+Crear el superusuario, encender el servidor y entar a la pagina de administracion
+
+Conforme se añaden tablas a la base de datos, van a apareciendo en el panel de control
+de Django. 
+
+Es posible agregar informacion, crear usuarior desde el panel de administracion
+
+>> Crear un usuario. 
+
+Esto es sumamente util debido a que en cualquier otro 
+framework este proceso y panel de administracion 
+lo tendriamos que hacer a pata nosotros mismos
+pero django ya hace todo el trabajo sucio por nosotros
+
+Parte 2. Cocento de modelos (Tablas de la base de datos)
+
+Son clases en python que se comportan como tablas en una 
+base de datos. 
+
+Mostrar ejemplo. y editar el models.py
+
+Hablar del parámetro Null en la tabla de la base de datos. 
+
+Para que esto se vea reflejado en el pandel de administracion 
+es necesario apagar el servidor si está abierto 
+
+y correr el siguiente comando en CMD
+
+>> python manage.py makemigrations
+>> python manage.py migrate
+
+Primero se prepara para la migracion y despues crea la tabla
+
+enseñar el folder de migrations, lo que hace es correr por atras 
+un monton de codigo SQL del que no tenemos que preocuparnos. 
+
+Mostrar como aun no aparece la tabla en el panel de administracion
+
+Primero se debe registrar la tabla para que aparezca
+
+Dentro de admin.py se hace lo siguiente para poder registrarla.
+
+>> from .models import Customer
+
+>> admin.site.register(Customer)
+
+Mostrar que ahora aparece la tabla de la base de datos en el 
+panel de administracion de Django. 
+
+Añadir el primer cliente
+
+Como no quiero que me aparezca Object (1) en la ventana, sino
+quiero que me aparezca el nombre respectivo
+
+nos vamos al models.py y hacemos lo siguiente
+
+Django por default crear un ID que es autoincremental por cada
+instancia que se crea en la base de datos, pero esto se puede 
+cambiar. 
+
+Añdir las dos tablas mas a la base de datos y prepar la base de 
+datos para las relaciones de tablas. 
+
+Volver a migrar la base de datos y mostrar el efecto que tiene
+
+Registrar todas las tablas en admin.py
+
+>> from .models import *
+
+Parte 3. Relaciones de la base de datos
+
+3.1 One to many 
+
+3.2 Many to Many
+
+Un cliente puede tener muchas ordenes, pero cada una de las ordenes
+solo puede estar asociada a un unico cliente. 
+
+Aqui tenemos la primer relacion de uno a muchos (One to Many)
+
+
