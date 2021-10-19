@@ -1,0 +1,48 @@
+Primero abrir la terminal de Django con el siguiente comando:
+
+>>py manage.py shell
+
+Explicar cada una de los data querries dentro de queryDemos.py 
+
+
+Parte 2. Mostrar datos en la plantilla HTML
+
+Template Tags
+
+basicamente es escribir codigo python directo en el HTML para facilitar las cosas
+
+hay dos tipos
+
+
+logica python de control de flujo
+
+
+{% for/if %}
+
+tags de datos 
+
+{{}}
+
+
+agregar esto a products.html
+
+
+>> 		{% for i in products%}
+                {{}}
+                {% endfor %}
+
+
+E irse al archivo de vistas y explicar el parametro de contexto
+
+		{% for i in products%}
+                <tr>
+                    <td> {{i.name}} </td>
+                    <td> {{i.category}} </td>
+                    <td> {{i.price}} </td>
+                </tr>
+                {% endfor %}
+
+
+Llenar el dashboard principal, hacer el proceso de vista + html y explicar como 
+se jala todo por atributos.
+

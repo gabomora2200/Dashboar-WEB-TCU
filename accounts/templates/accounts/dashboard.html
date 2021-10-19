@@ -1,0 +1,61 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+
+{% include 'accounts/status.html' %}
+<br>
+
+<div class="row">
+    <div class="col-md-5">
+        <h5>Clientes:</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="">Crear usuario</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Cliente</th>
+                    <th>Número Telefónico</th>
+                </tr>
+
+                {% for customer in customers %}
+                <tr>
+                    <td> {{customer.name}} </td>
+                    <td> {{customer.phone}} </td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <h5>Ultimas 5 Ordenes</h5>
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="">Create Order</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Producto</th>
+                    <th>Fecha de la orden</th>
+                    <th>Status de la orden</th>
+                    <th>Actualizar la orden</th>
+                    <th>Eliminar la orden</th>
+                </tr>
+
+                {% for order in orders %}
+                <tr>
+                    <td> {{order.product}} </td>
+                    <td> {{order.date_created}} </td>
+                    <td> {{order.status}} </td>
+                    <td><a href="">Actualizar </a></td>
+                    <td><a href="">Eliminar </a></td>
+                </tr>
+                {% endfor %}
+
+
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
