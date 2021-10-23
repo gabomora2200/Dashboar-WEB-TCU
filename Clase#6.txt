@@ -1,0 +1,40 @@
+Para este punto se quiere poder darle click a un cliente y que la pagina del cliente cambie
+dependiendo del cliente como tal. Para esto se usan los URLs dinamicos, por lo que entonces 
+es necesario pasar alguna caracteristica del consumidor por el URL y así desplegar el contenido
+de ese cliente especifico. 
+
+Vamos a incrustar el ID del consumidor al URL para lograr esto. Para construir un URL dinámico
+es necesario hacer vistas dinámicas. 
+
+>> pasar como parámetro pk en el customer view
+
+>> pk = primary key
+
+>> path("customer/<str:pk>", views.customer)
+
+Meter al customer al diccionario del contexto
+
+Poner botones y terminar de estilizar la pagina de customers
+
+Hablar del nombre que se le puede dar a las plantillas de HTML
+
+CRUD = CREATE, UPDATE and DELETE
+
+A partir de la estructura de la base de datos vamos a poder crear, eliminar ordenes de los
+clientes. 
+
+Hay que tener las relaciones de tablas pendientes al hacer eso 
+
+Hacer un nuevo html order_form.html
+
+Crear un forms.py
+
+>> from django.forms import ModelForm
+
+>> class Meta:
+        model = Order
+        fields = '__all__' # Añade al formulario todas las casillas del modelo. 
+
+>> {% crsf_token %}
+
+
